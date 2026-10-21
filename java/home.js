@@ -142,6 +142,9 @@ let testimonial = new Swiper('.swiper2', {
 
 $('#embrace').magnificPopup({
     type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
     iframe: {
         patterns: {
             youtube: {
@@ -152,8 +155,16 @@ $('#embrace').magnificPopup({
                     return m[1];
                 },
                 src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0&showinfo=0&enablejsapi=1'
+            },
+            youtu: {
+                index: 'youtu.be/', 
+                id: function(url) {        
+                    var m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+                    if ( !m || !m[1] ) return null;
+                    return m[1];
+                },
+                src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0&showinfo=0&enablejsapi=1'
             }
-            
         }
     }
 });

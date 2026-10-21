@@ -1848,6 +1848,8 @@ img {
   .about__bg {
     background-image: url("../img/3.jpg");
     background-position: right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
     height: 100%; }
     .about__bg .about__bg--gradient {
       background-color: rgba(0, 0, 0, 0.1) !important;

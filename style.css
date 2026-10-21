@@ -198,3 +198,59 @@
         padding: 1px 3px !important;
     }
 }
+
+
+/* ========== PRICING CARDS RESPONSIVE LAYOUT ========== */
+
+/* Desktop: All 4 cards in one row */
+#plan-cont {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 15px !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    align-items: flex-start !important;
+}
+
+#plan-hold {
+    flex: 1 1 calc(25% - 12px) !important;
+    min-width: 0 !important;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 992px) {
+    #plan-cont {
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        justify-content: space-between !important;
+    }
+    
+    #plan-hold {
+        flex: 0 1 calc(50% - 10px) !important;
+        min-width: 0 !important;
+    }
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 576px) {
+    #plan-cont {
+        flex-wrap: wrap !important;
+        gap: 25px !important;
+    }
+    
+    #plan-hold {
+        flex: 0 1 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    #plan-cont {
+        gap: 20px !important;
+    }
+    
+    #plan-hold {
+        flex: 0 1 100% !important;
+    }
+}

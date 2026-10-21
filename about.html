@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from solidsparkinvestment.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Apr 2026 11:04:16 GMT -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Solidsparkinvestment is an Investment firm that generates passive incomes for her potential 
+<meta name="description" content="wealthallianceinvestments is an Investment firm that generates passive incomes for her potential 
     Investors, we offer Cryptocurrency, Real estate and forex related investment services.">
-<meta name="keywords" lang="en" content="stock exchanges, cryptocurrency, forex, bitcoin, investment, ethereum, markets, Solidsparkinvestment, crypto-investment">
+<meta name="keywords" lang="en" content="stock exchanges, cryptocurrency, forex, bitcoin, investment, ethereum, markets, wealthallianceinvestments, crypto-investment">
 <meta property="og:url" content="/" />
 <meta property="og:type" content="Organization" />
-<meta property="og:title" content="SolidsparkinvestmentInvestment Firm" />
-<meta property="og:description" content="Solidsparkinvestment is an Investment firm that generates passive incomes for her potential Investors, we offer Crypto, Blockchain and forex related investment services." />
+<meta property="og:title" content="wealthallianceinvestmentsInvestment Firm" />
+<meta property="og:description" content="wealthallianceinvestments is an Investment firm that generates passive incomes for her potential Investors, we offer Crypto, Blockchain and forex related investment services." />
 <meta property="og:image" content="i.ibb.co/09t77QX/tradeon.html" />
 
 <link rel="icon" type="image/png" sizes="20x20" href="assets/images/favicon.html">
@@ -21,10 +19,10 @@
 <meta name="revisit-after" content="1 days">
 <meta name="distribution" content="global">
 <meta name="copyright" content="/">
-<meta name="contact" content="Solidsparkinvestment.com">
+<meta name="contact" content="wealthallianceinvestments.com">
 <meta name="robots" content="index, follow, all">
 <meta name="identifier-url" content="/">
-<meta name="apple-mobile-web-app-capable" content="Solidsparkinvestment">
+<meta name="apple-mobile-web-app-capable" content="wealthallianceinvestments">
 
 <link rel="icon" href="images/icon01.svg">
 <link rel="stylesheet" href="css/pincss.css">
@@ -49,6 +47,34 @@
 </div>
 
 <style>
+/* Enhanced Preloader - Fade out smoothly */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D3D3D3;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.preloader.hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Ensure main content is always visible */
+main {
+    position: relative;
+    z-index: 1;
+    display: block !important;
+}
+
 /* Hide scrolling ticker */
 [style*="background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460)"],
 [style*="background: linear-gradient(90deg, rgba(26,26,46,1), rgba(22,33,62,1), rgba(15,52,96,1)"] {
@@ -112,31 +138,32 @@
 }
 </style>
 <script>
-// Immediate ticker removal - runs before page load
+// Targeted ticker removal - ONLY removes specific ticker elements, not parent containers
 (function() {
     function removeTicker() {
-        // Remove elements with migration text
-        var elements = document.querySelectorAll('*');
-        for(var i = 0; i < elements.length; i++) {
-            var el = elements[i];
-            if(el.textContent && (
-                el.textContent.includes('Important Notice') &&
-                el.textContent.includes('migrated') &&
-                el.textContent.includes('solidsparkinvestment.ltd')
-            )) {
-                el.remove();
-            }
-        }
+        // Only target elements with specific classes or IDs used by scrolling ticker
+        var tickerSelectors = [
+            '.scrolling-ticker',
+            '.ticker-container',
+            '[data-ticker]',
+            '.important-notice'
+        ];
+        
+        tickerSelectors.forEach(function(selector) {
+            var elements = document.querySelectorAll(selector);
+            elements.forEach(function(el) {
+                if (el && el.textContent && el.textContent.includes('migrated')) {
+                    el.remove();
+                }
+            });
+        });
     }
-    
-    // Run immediately
-    removeTicker();
     
     // Run when DOM is ready
     document.addEventListener('DOMContentLoaded', removeTicker);
     
-    // Run periodically
-    setInterval(removeTicker, 300);
+    // Run periodically with lower frequency
+    setInterval(removeTicker, 1000);
 })();
 </script>
 <div class="navigation">
@@ -181,7 +208,7 @@
 <a href="faqs.html" class="navigation__link">FAQs</a>
 </li>
 <li class="navigation__item">
-<a href="https://user.solidsparkinvestment.com/login" class="navigation__link">Log in</a>
+<a href="https://app.wealthallianceinvestments.com/login" class="navigation__link">Log in</a>
 </li>
 <li class="navigation__item">
 <!-- Google Translate Widget - Mobile -->
@@ -190,7 +217,7 @@
 </div>
 </li>
 <li class="navigation__item">
-<a href="https://user.solidsparkinvestment.com/register" class="navigation__link">Register</a>
+<a href="https://app.wealthallianceinvestments.com/register" class="navigation__link">Register</a>
 </li>
 </ul>
 </nav>
@@ -203,8 +230,8 @@
 <header class="header navbar fixed-top navbar-expand-lg">
 <div class="container">
 <a class="navbar-brand logo" href="index.html">
-<img src="images/3.svg" class="hide first" alt="Solidsparkinvestment" width=150>
-<img src="images/prime.png" class="last" width= alt="Solidsparkinvestment" style="width:150px" />
+<img src="img/wealthalliancelogoblack.png" class="hide first" alt="wealthallianceinvestments" width=150>
+<img src="img/wealthalliancelogoblack.png" class="last" width= alt="wealthallianceinvestments" style="width:150px" />
 <!-- Google Translate Widget -->
 <div id="google_translate_element" style="margin-left: 20px;"></div>
 </a>
@@ -273,11 +300,11 @@ function googleTranslateElementInit() {
 </li>
 
 <div class="nav-log">
-<a class="nav-link " href="https://user.solidsparkinvestment.com/login">Login</a>
+<a class="nav-link " href="https://app.wealthallianceinvestments.com/login">Login</a>
 </div>
 
 <div class="nav-reg">
-    <a class="nav-link " href="https://user.solidsparkinvestment.com/register" >Sign up</a>
+    <a class="nav-link " href="https://app.wealthallianceinvestments.com/register" >Sign up</a>
 </div>
 </ul>
 </div>
@@ -363,10 +390,10 @@ window.addEventListener('load', function() {
 
 <script>
     
-</script><title>About Us | Solidsparkinvestment investment firm </title>
+</script><title>About Us | wealthallianceinvestments investment firm </title>
 <link rel="stylesheet" type="text/css" href="stylesheet/about.css">
 <link rel="stylesheet" type="text/css" href="stylesheet/magnific-popup.css">
-<main style="margin-top: 50px;">
+<main style="margin-top: 80px; min-height: calc(100vh - 80px); display: block; visibility: visible; opacity: 1;">
 <section>
 <div class="about">
 <div class="about__bg bg-img">
@@ -375,8 +402,8 @@ window.addEventListener('load', function() {
 <div class="widthper mt40">
 <div class="row justify-content-center">
 <div class="col-lg-8">
-<h4 class="mb25"> <span id="laito"> Solidsparkinvestment</span> <span id="about-feature"></span></h4>
-<p> Solidsparkinvestment is a robust multi-asset online blockchain based trading company that allows interested investors to trade a variety of financial assets such as cryptocurrencies, Real Estate,Gold Commodities and Others using state of the art market analysis tools.</p>
+<h4 class="mb25"> <span id="laito"> wealthallianceinvestments</span> <span id="about-feature"></span></h4>
+<p> wealthallianceinvestments is a robust multi-asset online blockchain based trading company that allows interested investors to trade a variety of financial assets such as cryptocurrencies, Real Estate,Gold Commodities and Others using state of the art market analysis tools.</p>
 <div class="about__trips mt40">
 <div class="trips">
 <div class="trips__container">
@@ -417,9 +444,9 @@ Profitability <br> guaranteed
 <div class="intro__wel text-center container ">
 <div class="row justify-content-center text-center">
 <div class="col-lg-8" data-aos-duration="1400" data-aos-once="true">
-<h4> Solidsparkinvestment</h4>
+<h4> wealthallianceinvestments</h4>
 <p>
- Solidsparkinvestment  is a company that uses the advance AI software tools to trade in Forex and cryptocurrency market to generate income for our investors. We have experts who assists gold-mining investors make extra profits in the stock market. There are well-trained and experienced realtors who also helps our real estate investors make extra profits by just investing in our investment plans, sit back and watch as a $500 multiplies to a $10000 without risk of loosing funds. Collaboration with us is a high-tech process of integrating each client into  Solidsparkinvestment  unique investor community to strengthen the financial stability of each of them and to obtain a stable profit without risk of losing capital. <br><br>We are not just a trading or a real estate company.  Solidsparkinvestment  is a tool that allows everyone to develop potential, making investments based on our technologies. In  Solidsparkinvestment , you will receive profit every day, including weekends. You will enjoy perpetual profits each day of the month. Our system automatically sends the profit directly to your account through which you Invested. Compounding is available in all plans. Hence you get the maximum profits with minimum risk possible).  
+ wealthallianceinvestments  is a company that uses the advance AI software tools to trade in Forex and cryptocurrency market to generate income for our investors. We have experts who assists gold-mining investors make extra profits in the stock market. There are well-trained and experienced realtors who also helps our real estate investors make extra profits by just investing in our investment plans, sit back and watch as a $500 multiplies to a $10000 without risk of loosing funds. Collaboration with us is a high-tech process of integrating each client into  wealthallianceinvestments  unique investor community to strengthen the financial stability of each of them and to obtain a stable profit without risk of losing capital. <br><br>We are not just a trading or a real estate company.  wealthallianceinvestments  is a tool that allows everyone to develop potential, making investments based on our technologies. In  wealthallianceinvestments , you will receive profit every day, including weekends. You will enjoy perpetual profits each day of the month. Our system automatically sends the profit directly to your account through which you Invested. Compounding is available in all plans. Hence you get the maximum profits with minimum risk possible).  
 </p>
 <div>
 <div class="divider pseudo">
@@ -440,19 +467,19 @@ Profitability <br> guaranteed
 <div class="row hundper align-items-center">
 <div class="col-md-6 ">
 <div class="histo__text pl40 pr40">
-<h3 class="mb30">How  Solidsparkinvestment 
+<h3 class="mb30">How  wealthallianceinvestments 
 Limited Generates Income &nbsp;&nbsp; <i class="ti-server"></i></h3>
 <p class="">
  
- Solidsparkinvestment  earns money with price drop and rise for cryptocurrency, sales and management of real estate properties and digital mining of gold. However, this kind of activity is very risky. Most investors don’t have enough information and knowledge, so they often lose their capital when trading cryptocurrency and gold stocks. They also  do not know how to manage real estate properties.
+ wealthallianceinvestments  earns money with price drop and rise for cryptocurrency, sales and management of real estate properties and digital mining of gold. However, this kind of activity is very risky. Most investors don’t have enough information and knowledge, so they often lose their capital when trading cryptocurrency and gold stocks. They also  do not know how to manage real estate properties.
 <br><br>
-In  Solidsparkinvestment , you will receive profit every day, including weekends. You will enjoy perpetual profits each day of the month. Our system automatically sends the profit directly to your account through which you Invested. Compounding is available in all plans and investments. Hence you get the maximum profits with minimum risk possible.  
+In  wealthallianceinvestments , you will receive profit every day, including weekends. You will enjoy perpetual profits each day of the month. Our system automatically sends the profit directly to your account through which you Invested. Compounding is available in all plans and investments. Hence you get the maximum profits with minimum risk possible.  
 </p>
 </div>
 </div>
 <div class="col-md-6 ">
 <div class="histo__text pl50 pr40" data-aos="fade-in">
-<h3 class="mb30"> Solidsparkinvestment  
+<h3 class="mb30"> wealthallianceinvestments  
 Investment Packages &nbsp;&nbsp; <i class="pe-7s-users nato"></i></h3>
 <p>
   We offer our partners attractive terms of collaboration. The right to use the company's brand, a well-established algorithm for conducting business, comprehensive support from company specialists. Attractive conditions for investing in the fastest growing company will help you to invite potential clients for cooperation easily.  <br><br>
@@ -492,7 +519,7 @@ Our goal is to provide all parties with the information they need, allowing a sm
 <div class="col-lg-7 col-md-7 col-sm-12">
 <p class="roadmap__exp">
  
-We believe that the future of finance looks very different to how it looks today and we offer qualifying investors the opportunity to invest in the companies and products that are building the future of finance.  Solidsparkinvestment , is a distinctive investment platform offering investors opportunities in the crypto markets, 
+We believe that the future of finance looks very different to how it looks today and we offer qualifying investors the opportunity to invest in the companies and products that are building the future of finance.  wealthallianceinvestments , is a distinctive investment platform offering investors opportunities in the crypto markets, 
 gold-mining stock and real estate investments. We emphasize on understanding our client’s requirement.
 </p>
 </div>
@@ -532,7 +559,7 @@ CHOOSE US?    </h4>
 <div class="col-lg-7 col-md-7 col-sm-12">
 <p class="roadmap__exp">
 
- Solidsparkinvestment  offers investment capabilities across traditional and alternative asset classes for private clients, intermediaries and institutional investors. Offering high net worth and affluent investor support around the world a complete range of tailored advice and investment services.  
+ wealthallianceinvestments  offers investment capabilities across traditional and alternative asset classes for private clients, intermediaries and institutional investors. Offering high net worth and affluent investor support around the world a complete range of tailored advice and investment services.  
 We are a reliable and trustworthy Cryptocurrency mining, Digital gold-mining and Real Estate company, and our investment past records can show how far we have come as an investment company.  
 </p>
 </div>
@@ -654,7 +681,7 @@ background-position: left;
 </div>
 <div class="team__main__explain">
 <p>
-He is responsible for all financial activities of the corporation. Bruce was elected chief financial officer for  Solidsparkinvestment after having previously worked in several leadership roles at the company.
+He is responsible for all financial activities of the corporation. Bruce was elected chief financial officer for  wealthallianceinvestments after having previously worked in several leadership roles at the company.
 
 </p>
 </div>
@@ -672,7 +699,7 @@ He is responsible for all financial activities of the corporation. Bruce was ele
 </div>
 <div class="team__main__explain">
 <p>
-Derek has been the most sought out forex trader for the past two years, and he's here with us at  Solidsparkinvestment. His unique strategies have helped secure the best deals for us and his transparency is also what makes other cryptocurrency trading programs seek his experience.
+Derek has been the most sought out forex trader for the past two years, and he's here with us at  wealthallianceinvestments. His unique strategies have helped secure the best deals for us and his transparency is also what makes other cryptocurrency trading programs seek his experience.
 </p>
 </div>
 </div>
@@ -772,7 +799,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 <h3 class="m0">Guaranteed profit</h3>
 <div class="explain__seperator"></div>
 <p>
- Solidsparkinvestment been run by a team of trading experts, profitability is gauranteed out of your Investment with our company.
+ wealthallianceinvestments been run by a team of trading experts, profitability is gauranteed out of your Investment with our company.
 </p>
 </div>
 </div>
@@ -791,7 +818,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 <div class="row steps">
 <div class="col-md-4">
 <div class="process__circle pull-left">1</div>
-<p class="process__text">Sign up for a  Solidsparkinvestment account.</p>
+<p class="process__text">Sign up for a  wealthallianceinvestments account.</p>
 </div>
 <div class="col-md-4">
 <div class="process__circle pull-left">2</div>
@@ -804,7 +831,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 </div>
 <div class="row text-center">
 <div class="col-sm-12 mt30">
-<a class="btn__normal coloured roll--text aos-init aos-animate" data-aos="fade-in" data-aos-delay="3000" data-text="get started" href="https://user.solidsparkinvestment.com/login">&nbsp;&nbsp;&nbsp; Get started &nbsp;&nbsp;&nbsp;</a>
+<a class="btn__normal coloured roll--text aos-init aos-animate" data-aos="fade-in" data-aos-delay="3000" data-text="get started" href="https://app.wealthallianceinvestments.com/login">&nbsp;&nbsp;&nbsp; Get started &nbsp;&nbsp;&nbsp;</a>
 </div>
 </div>
 </div>
@@ -822,14 +849,14 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 <div class="row align-items-center">
 <div class="col-lg-6">
 <div class="footer__logo widthper text-center text-left-md">
-<img src="images/3.svg" alt="">
+<img src="img/wealthalliancelogoblack.png" alt="">
 </div>
 </div>
 <div class="col-lg-6 text-center text-right-md">
 <div>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="https://user.solidsparkinvestment.com/login">Login</a>
+<a href="https://app.wealthallianceinvestments.com/login">Login</a>
 <a href="contact.html">Contact</a>
 <a href="faqs.html">FAQs</a>
 
@@ -839,7 +866,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 <hr class="my-0">
 </div>
 <div class="col-md-4 text-center text-left-md">
-<small>© 2023 Solidsparkinvestment. All rights reserved. <a href="terms.html">Terms</a></small>
+<small>© 2023 wealthallianceinvestments. All rights reserved.</small>
 </div>
 <div class="col-md-8 text-center text-right-md">
 <div>
@@ -902,7 +929,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
                     "position":"left"
                 },
                 "brandSetting":{
-                    "brandName":"Solidsparkinvestment",
+                    "brandName":"wealthallianceinvestments",
                     "brandSubTitle":"undefined",
                     "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
                     "welcomeText":"Hi there!\nHow can I help you?",
@@ -911,7 +938,7 @@ We have made means of payout to clients so easy with no hassle. You can easily c
                     "ctaText":"Chat with us",
                     "borderRadius":"25",
                     "autoShow":true,
-                    "phoneNumber":"447950413926"
+                    "phoneNumber":"447724092913"
                 }
                 };
                 s.onload = function() {
@@ -927,5 +954,4 @@ We have made means of payout to clients so easy with no hassle. You can easily c
 <script src="java/home.js"></script>
 </body>
 
-<!-- Mirrored from solidsparkinvestment.com/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Apr 2026 11:04:22 GMT -->
 </html>
